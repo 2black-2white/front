@@ -5,6 +5,10 @@
   const handleLogin = () => {
     console.log("로그인 버튼 클릭", { studentId, password });
   };
+
+  const handleSignup = () => {
+    window.location.href = '/signup'; // Redirect to /signup
+  };
 </script>
 
 <style>
@@ -28,36 +32,13 @@
   }
 
   h1 {
-    text-align: left;
+    text-align: center; 
     margin-bottom: 20px;
-    font-size: 24px;
-    transform: translateX(-50px); 
-  }
-
-  .input-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  input {
-    width: 400px;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    background-color: #1D1F29;
-    color: white;
-    font-size: 14px;
-    border: none; 
-  }
-
-  input:focus {
-    outline: none; 
+    font-size: 50px; 
   }
 
   .login-button {
-    width: 100%;
+    width: 200px;
     padding: 10px;
     background-color: #1D1F29;
     border: none;
@@ -65,6 +46,7 @@
     color: white;
     font-size: 16px;
     cursor: pointer;
+    margin-left: 60px;
   }
 
   .register-link {
@@ -86,20 +68,10 @@
 
 <div class="login-container">
   <div class="login-box">
-    <h1>로그인</h1>
-    <div class="input-container">
-      <input 
-        type="text" 
-        placeholder="학번을 입력해주세요." 
-        bind:value={studentId} />
-      <input 
-        type="password" 
-        placeholder="비밀번호를 입력해주세요." 
-        bind:value={password} />
-    </div>
-    <button class="login-button" on:click={handleLogin}>로그인</button>
+    <h1>환영합니다</h1>
+    <button class="login-button" on:click={handleSignup}>회원가입</button>
     <div class="register-link">
-      아직 가입하지 않았다면 <a href="/register">회원 가입 하기</a>
+      이미 가입한 사용자라면<a href="/signin"> &nbsp 로그인 하기</a>
     </div>
   </div>
 </div>
