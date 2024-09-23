@@ -1,58 +1,17 @@
-# create-svelte
+## 도토리
+도토리는 부산소프트웨어마이스터고등학교 기숙사 출결을 담당하는 서비스입니다.
+도토리 개발으로 기숙사는 학생과 선생님 모두가 편해집니다. 
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+### 선생님
+선생님은 매일 학생들이 출석할 때 마다 학생 명단을 일일이 확인하고 보고해야하는 일이 많아졌습니다. 
+또, 친구가 대신 싸인을 해주는 일이 일어나 방식의 의문점도 생겼습니다. 
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
+하지만 도토리 사용으로 대신 출석, 학생 명단 한번에 보여짐 등 선생님께 매우 이로운 역할을 합니다. 
 
-## Creating a project
+## 학생
+기숙사 입소 때 학생들은 리스트에 본인의 이름을 적어 출석을 체크합니다.
+출석을 체크할 때 가장 문제점은 대신 출석이였습니다. 
+그리고, 한 곳에만 있는 리스트로 인해 먼 거리를 이동하는 학생들이 많았습니다.
 
-If you're seeing this, you've probably already done this step. Congrats!
+이 문제를 각각의 위치에 있는 RFID에 학생증을 찍어 출석을 인증할 수 있습니다. 
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
-
-## Building
-
-To build your library:
-
-```bash
-npm run package
-```
-
-To create a production version of your showcase app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
